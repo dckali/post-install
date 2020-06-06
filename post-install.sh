@@ -48,9 +48,10 @@ curl -sL "$bat_latest_location"  | sudo tar --wildcards -C /usr/local/bin/ -xzf 
 # Install burp
 echo "[*] Downloading burp pro"
 # wget 'https://portswigger.net/burp/releases/download?product=community&version=2020.4.1&type=Linux'
-BURP_DL_URL="https://cloudflare-ipfs.com/ipfs/QmVg8vP7CgYB6J8ePXd3UbEm1WYF985hB2TTbGYfafPwcJ"
-BURP_FILE="burpsuite_pro_linux_v2020_4_1.sh"
-BURP_SHA256="41763529ab2500da1369c749af1aa63a6c9d3be7d02960fea94e0f11c822cc7b"
+# http://127.0.0.1:5001/api/v0/pin/add?arg=QmWS4EKNnd8yTS2YDMV51QEBE4FUoDXZBTCMXfJ3Vrtgqf
+BURP_DL_URL="https://cloudflare-ipfs.com/ipfs/QmWS4EKNnd8yTS2YDMV51QEBE4FUoDXZBTCMXfJ3Vrtgqf"
+BURP_FILE="burpsuite_pro_linux_v2020_5.sh"
+BURP_SHA256="1a915321fc15fa5374abed2965dfaf5e982325673d0f4deefbb53c2d6c5da6c2"
 wget "$BURP_DL_URL" -O "$BURP_FILE" 
 echo -ne "$BURP_SHA256\t$BURP_FILE" | sha256sum --check --status 
 
